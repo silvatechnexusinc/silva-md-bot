@@ -1,105 +1,179 @@
 {
-  "name": "gifted-md",
+  "name": "silva-md",
   "version": "5.0.0",
-  "description": "I am Gifted-Md, a Simple WhatsApp Bot built with NodeJs to Enhance WhatsApp Communication experience",
+  "description": "I am silva-MD, a simple WhatsApp Bot built with NodeJs to enhance WhatsApp communication experience",
   "website": "https://session.giftedtech.co.ke",
-  "dev_email": "mauricegift@gmail.com",
+  "dev_email": "sylivanusmomanyi@gmail.com",
   "logo": "https://files.catbox.moe/52699c.jpg",
-  "keywords": ["gifted-md"],
-  "repository": "https://github.com/mauricegift/gifted-md",
+  "keywords": ["silva-md"],
+  "repository": "https://github.com/silvatechnexusinc/silva-md-bot",
   "success_url": "/",
   "stack": "container",
   "env": {
     "SESSION_ID": {
-      "description": "Put your session-id here. Must Start with 'PRINCE-MDX~'",
+      "description": "Put your session-id here. Must start with 'PRINCE-MDX~'",
       "required": true,
       "value": ""
-    },  
-    "MODE": {
-      "description": "Set Mode  to 'public' to work in all chats only, 'inbox' to work in pm(inbox) chats only or 'private' to work for you only. Default is 'public'. You can set up this later using .mode",
-      "required": false,
-      "value": "public"
+    },
+    "PREFIX": {
+      "description": "Command prefix for the bot",
+      "value": "."
     },
     "OWNER_NAME": {
-      "description": "Put Owner Name Here",
-      "required": true,
-      "value": "PRINCE"
+      "description": "Owner's name",
+      "value": "SILVA"
     },
     "OWNER_NUMBER": {
-      "description": "Put only one Owner Number Here ie 237xxxxx",
-      "required": true,
-      "value": "237677224245"
-    },
-    "ANTI_DELETE": {
-      "description": "Can be set to 'inboxonly' to recover for personal chats only, 'chatsonly' to recover for groups and personal chats only or 'true' to recover all chats and status updates. Default is 'false'. You can set up this later using .antidelete",
-      "required": false,
-      "value": "inboxonly"
+      "description": "Owner's WhatsApp number (single)",
+      "value": "254755257907"
     },
     "SUDO_NUMBERS": {
-      "description": "Put Sudo Numbers separated by comma Here ie 2347xxxx,2357xxxxx,920xxxxx. Sudos have same rights as owner(can command the bot). if you don't want leave the space empty",
-      "required": false,
+      "description": "Additional privileged numbers (comma-separated)",
       "value": ""
     },
-    "AUTO_READ_STATUS": {
-      "description": "Make it 'true' if you want bot to view statuses. You can set up this later using .autoview",
-      "required": true,
+    "BOT_NAME": {
+      "description": "Bot display name",
+      "value": "SILVA"
+    },
+    "FOOTER": {
+      "description": "Footer text for menus and messages",
+      "value": "SILVA"
+    },
+    "CAPTION": {
+      "description": "Default caption for media messages",
+      "value": "SILVA"
+    },
+    "VERSION": {
+      "description": "Bot version",
+      "value": "5.0.0"
+    },
+    "BOT_PIC": {
+      "description": "URL for bot profile picture",
+      "value": "https://files.catbox.moe/5uli5p.jpeg"
+    },
+    "MODE": {
+      "description": "Bot mode (public/private)",
+      "value": "public"
+    },
+    "PM_PERMIT": {
+      "description": "Enable PM permission system (true/false)",
+      "value": "false"
+    },
+    "WARN_COUNT": {
+      "description": "Number of warnings before action is taken",
+      "value": "3"
+    },
+    "TIME_ZONE": {
+      "description": "Time zone for bot",
+      "value": "Africa/Nairobi"
+    },
+    "DM_PRESENCE": {
+      "description": "Bot presence status in direct messages (recording/typing/online/offline)",
+      "value": "recording"
+    },
+    "GC_PRESENCE": {
+      "description": "Bot presence status in group chats (recording/typing/online/offline)",
+      "value": "typing"
+    },
+    "CHATBOT": {
+      "description": "Enable chatbot (true/audio/false)",
+      "value": "false"
+    },
+    "CHATBOT_MODE": {
+      "description": "Mode for chatbot (inbox/groups/allchats)",
+      "value": "inbox"
+    },
+    "STARTING_MESSAGE": {
+      "description": "Send starting message on startup (true/false)",
+      "value": "true"
+    },
+    "ANTIDELETE": {
+      "description": "Anti-delete messages mode (inchat/indm/false)",
+      "value": "indm"
+    },
+    "GOODBYE_MESSAGE": {
+      "description": "Send goodbye message (true/false)",
+      "value": "false"
+    },
+    "ANTICALL": {
+      "description": "Anti-call feature (decline/true/block/false)",
+      "value": "false"
+    },
+    "ANTICALL_MSG": {
+      "description": "Message sent when a call is blocked",
+      "value": "*_📞 Auto Call Reject Mode Active. 📵 No Calls Allowed!_*"
+    },
+    "WELCOME_MESSAGE": {
+      "description": "Send welcome message to new members (true/false)",
+      "value": "false"
+    },
+    "ANTILINK": {
+      "description": "Anti-link feature mode (true/delete/kick)",
       "value": "true"
     },
     "AUTO_LIKE_STATUS": {
-      "description": "Make it 'true' if you want bot to read and like statuses. You can set up this later using .autolike",
-      "required": false,
+      "description": "Automatically like status updates",
+      "value": "true"
+    },
+    "AUTO_READ_STATUS": {
+      "description": "Automatically read status updates",
       "value": "true"
     },
     "STATUS_LIKE_EMOJIS": {
-      "description": "Input your custom status like emoji(s) else leave to use default emojis. Only works if autolike status is 'true'",
-      "required": false,
-      "value": "💜,💛,❤️,🤍,💙"
+      "description": "Emojis used when auto-liking statuses",
+      "value": "💛,❤️,💜,🤍,💙"
     },
     "AUTO_REPLY_STATUS": {
-      "description": "Make it 'true' if you want the bot to send message after viewing status",
-      "required": false,
+      "description": "Enable auto-reply to status views",
       "value": "false"
     },
-    "STATUS_REPLY_MSG": {
-      "description": "Set your status reply message to be sent after bot views status",
-      "required": false,
-      "value": "Status Viewed ✅️"
+    "STATUS_REPLY_TEXT": {
+      "description": "Text sent as auto-reply for status views",
+      "value": "*ʏᴏᴜʀ sᴛᴀᴛᴜs ᴠɪᴇᴡᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ ✅*"
+    },
+    "AUTO_REACT": {
+      "description": "Automatically react to messages",
+      "value": "false"
+    },
+    "AUTO_REPLY": {
+      "description": "Automatically reply to messages",
+      "value": "false"
     },
     "AUTO_READ_MESSAGES": {
-      "description": "Enter value to 'true' for blueticking all messages, or 'commands' for blueticking only commands else false. You can set up this later using .autoread",
-      "required": false,
+      "description": "Auto-read messages (true/commands/false)",
       "value": "false"
     },
-    "PRESENCE": {
-      "description": "Put 'online' for always online, 'typing' for always typing a message, 'recording' for always recording audio or 'null' to maintain your presence. You can set up this later using .presence",
-      "required": true,
-      "value": "online"
-    },
-    
-    "ANTILINK": {
-      "description": "Enter 'true' to delete links and kick the user automatically or 'delete' to delete the links without kicking the user or 'warn' to warn users 3 times before kicking them. You can set up this later using .antilink",
-      "required": false,
-      "value": ""
+    "AUTO_BIO": {
+      "description": "Automatically update bot bio",
+      "value": "false"
     },
     "AUTO_BLOCK": {
-      "description": "Provide country codes you want the bot to automatically block",
-      "required": false,
-      "value": "333,77,12"
+      "description": "Numbers to auto-block (comma-separated)",
+      "value": "212,233"
     },
-    "ANTICALL": {
-      "description": "Make it 'true' if you want to automatically reject calls or 'block' to decline calls and block caller. You can set up this later using .anticall",
-      "required": false,
-      "value": "false"
+    "YT": {
+      "description": "YouTube channel link",
+      "value": "youtube.com/@silvatechnexus"
     },
-    "BOT_NAME": {
-      "description": "You can edit this but maintain font style for uniformity. Use 'Fonts Type Keyboard' for styles.",
-      "required": false,
-      "value": "𝐏𝐑𝐈𝐍𝐂𝐄 𝐌𝐃𝐗"
+    "NEWSLETTER_JID": {
+      "description": "Newsletter WhatsApp JID",
+      "value": "120363200367779016@newsletter"
     },
-    "PREFIX": {
-      "description": "Your Bot Prefix (default: .) You can put your own custom prefix",
-      "required": true,
-      "value": "."
+    "NEWSLETTER_URL": {
+      "description": "Newsletter channel URL",
+      "value": "https://whatsapp.com/channel/0029VaAkETLLY6d8qhLmZt2v"
+    },
+    "BOT_REPO": {
+      "description": "Bot repository link",
+      "value": "SilvaTechB/silva-md-bot"
+    },
+    "PACK_NAME": {
+      "description": "Sticker pack name",
+      "value": "silva"
+    },
+    "PACK_AUTHOR": {
+      "description": "Sticker pack author",
+      "value": "silva"
     }
   }
-  }
+}
